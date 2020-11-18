@@ -27,6 +27,7 @@
               <div class="row-content">
                  <label class="label text" for="name">Name</label>
                  <input class="input" type="text" id="name"name="name" placeholder="Your name.." required>
+                 <error-output class="text-error" for="name"></error-output>
               </div>
 
               <div class="row-content">
@@ -83,7 +84,7 @@
 
               <div>
                   <div class="row-content">
-                      <label class="label text" for="salary">Choose your salary: </label>
+                      <label class="label text" for="salary">Salary</label>
                       <input class="input" type="range" name="salary" id="salary"
                       min="300000" max="500000" step="100" value="400000">
                       <output class="salary-output text" for="salary">400000</output>
@@ -154,8 +155,8 @@
             </div>
 
             <div class="row-content">
-                <label class="label text" for="notes">Notes</label>
-                <textarea id="notes" class="input" name="Notes" placeholder="Any Additional Information.." style="height:100px"></textarea>
+                <label class="label text notes" for="notes">Notes</label>
+                <textarea id="notes" class="input notes-box" name="Notes" placeholder="Any Additional Information.." style="height:100px"></textarea>
             </div>
 
             <div class="buttonParent">
@@ -168,5 +169,6 @@
 
             </form>
         </div>
+        <script src="../js/EmployeeForm.js"></script>
     </body>
 </html>
