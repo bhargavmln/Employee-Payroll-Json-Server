@@ -131,7 +131,7 @@ label {
 #day,#month,#year{
     width: 115px;
     height: 35px;
-    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 3px;
     opacity: 1;
 }
@@ -164,6 +164,7 @@ label {
     text-decoration: none;
     text-align: center;
     align-content: center;
+    padding: 12px 7px;
 }
 
 *{ box-sizing: border-box;}
