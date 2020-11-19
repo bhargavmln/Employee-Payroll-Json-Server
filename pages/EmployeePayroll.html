@@ -20,7 +20,7 @@
           </div>
         </header>
         <div class="form-content">
-            <form class="form" action="#" onsubmit="save();return false">
+            <form class="form" action="#" onsubmit="save()">
               
                 <div class="form-head">
                 Employee Payroll Form
@@ -71,15 +71,15 @@
               <div class="row-content">
                   <label class="label text" for="department">Department</label>
                   <div>
-                      <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                      <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                       <label class="text" for="hr">HR</label>
-                      <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                      <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                       <label class="text" for="sales">Sales</label>
-                      <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                      <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                       <label class="text" for="finance">Finance</label>
-                      <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                      <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
                       <label class="text" for="engineer">Engineer</label>
-                      <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                      <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
                       <label class="text" for="others">Others</label>
                   </div>
               </div>
@@ -132,18 +132,18 @@
                     </select>
                     <select id="month" name="month">
                         <option value="">Month</option>
-                        <option value="Jan">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                     </select>
                     <select id="year" name="year">
                         <option value="">Year</option>
@@ -153,6 +153,7 @@
                         <option value="2017">2017</option>
                         <option value="2016">2016</option>
                     </select>
+                    <error-output class="date-error" for="startDate"></error-output>
                 </div>
             </div>
 
