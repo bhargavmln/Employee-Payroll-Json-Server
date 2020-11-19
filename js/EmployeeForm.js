@@ -20,6 +20,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
         output.textContent = salary.value;
     });
 
+    const year = document.querySelector('#year');
+    const dateError = document.querySelector('.date-error');
+    year.addEventListener('input', function() {
+        try{
+            (new EmployeePayrollData()).startDate = new Date(parseInt(getInputValueById('#year')), parseInt(getInputValueById('#month')), parseInt(getInputValueById('#day')));
+            dateError.textContent = "";
+        } catch (e) {
+            dateError.textContent = e;
+        }
+    })
+
 });
 
 const save = () => {
