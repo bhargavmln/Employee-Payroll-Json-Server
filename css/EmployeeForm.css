@@ -101,7 +101,7 @@ label {
 }
 
 error-output{
-    font-size: 15px;
+    font-size: 12px;
     font-style: italic;
     color: red;
     margin-left: 10px;
