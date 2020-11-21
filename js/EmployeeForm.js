@@ -84,7 +84,8 @@ const resetForm = () => {
     setValue('#month','');
     setValue('#year','');
     setTextValue('.salary-output','400000');
-    setTextValue('.text-error','')
+    setTextValue('.text-error','');
+    setTextValue('.date-error','');
 }
 
 const unsetSelectedValues = (propertyValue) => {
