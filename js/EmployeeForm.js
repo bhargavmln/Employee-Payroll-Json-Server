@@ -73,6 +73,37 @@ const createEmployeePayroll = () => {
     return employeePayrollData;
 }
 
+const resetForm = () => {
+    setTextValue('#name','');
+    unsetSelectedValues('[name=profile]');
+    unsetSelectedValues('[name=gender','');
+    unsetSelectedValues('[name=department]');
+    setValue('#salary','');
+    setValue('#notes','');
+    setValue('#day','');
+    setValue('#month','');
+    setValue('#year','');
+    setTextValue('.salary-output','400000');
+    setTextValue('.text-error','')
+}
+
+const unsetSelectedValues = (propertyValue) => {
+    let allItems = document.querySelectorAll(propertyValue);
+    allItems.forEach(item => {
+        item.checked = false;
+    });
+}
+
+const setValue = (id,value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
+
+const setTextValue = (id,value) => {
+    const element = document.querySelector(id);
+    element.textContent = value;
+}
+
 const getSelectedValues = (propertyValue) => {
     let allItems = document.querySelectorAll(propertyValue);
     let selItems = [];
