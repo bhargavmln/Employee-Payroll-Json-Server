@@ -52,6 +52,16 @@ function createAndUpdateStorage(employeePayrollData){
     alert(employeePayrollList.toString());
     localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList));
 }
+function createId(){
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    let length;
+        if (employeePayrollList != undefined){
+            length = employeePayrollList.length;
+        } else {
+            length = 0;
+        }
+    return length;
+}
 
 const createEmployeePayroll = () => {
     let employeePayrollData = new EmployeePayrollData();
@@ -69,6 +79,7 @@ const createEmployeePayroll = () => {
     console.log(parseInt(getInputValueById('#year')), parseInt(getInputValueById('#month')), parseInt(getInputValueById('#day')))
     let date = new Date(parseInt(getInputValueById('#year')), parseInt(getInputValueById('#month')), parseInt(getInputValueById('#day')));
     employeePayrollData.startDate = date;
+    employeePayrollData.id = createId();
     alert(employeePayrollData.toString());
     return employeePayrollData;
 }
